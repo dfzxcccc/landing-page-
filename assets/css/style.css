@@ -1,30 +1,38 @@
-/* Скидання відступів та рамок для всіх елементів */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Розміри елемента включають внутрішні відступи та рамки */
+  box-sizing: border-box;
+
 }
 
-/* Глобальні змінні проєкту (Палітра TechShop) */
 :root {
-  --primary-color: #2563eb; /* Ваш фірмовий синій */
-  --primary-hover: #1d4ed8; /* Колір при наведенні */
-  --accent-color: #f59e0b;  /* Акцентний помаранчевий */
-  --text-dark: #1f2937;     /* Основний текст */
-  --text-light: #6b7280;    /* Другорядний текст */
-  --bg-color: #f9fafb;      /* Фон сторінки */
-  --font-main: "Inter", sans-serif;
+  --primary-color: #2563eb;
+
+  --primary-hover: #1d4ed8;
+
+  --accent-color: #f59e0b;
+
+  --text-dark: #1f2937;
+
+  --text-light: #6b7280;
+
+  --bg-color: #f9fafb;
+
+  --font-main: "Press Start 2P", system-ui;
 }
 
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-dark);
-  line-height: 1.6; /* Покращує читабельність тексту */
+  line-height: 1.6;
+
   font-size: 16px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   margin-bottom: 1rem;
 }
@@ -39,42 +47,76 @@ a:hover {
 }
 
 .footer a {
-  color: var(--text-light); /* Посилання лише у футері будуть сірими */
+  color: var(--text-light);
+
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 8px;
-  font-weight: 600;
-  text-transform: uppercase; /* Текст великими літерами */
-  letter-spacing: 1px;       /* Розрідження літер */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2); /* Ніжна синя тінь */
-}
-
-.btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px); /* Кнопка ніби піднімається */
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
-}
-
-.hero {
-  height: 60vh; /* 60% висоти екрану */
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.footer {
   text-align: center;
-  color: white;
+  padding: 20px;
+  background-color: #e5e7eb;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.nav a {
+  margin-left: 20px;
+  font-size: 0.8rem;
+}
+
+.main-content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects-section {
+  margin-bottom: 40px;
+}
+
+.projects-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.project-card {
+  background: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.image-section {
+  text-align: center;
+}
+
+.dota-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

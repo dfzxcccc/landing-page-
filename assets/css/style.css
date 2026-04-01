@@ -1,9 +1,80 @@
+/* Скидання відступів та рамок для всіх елементів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Розміри елемента включають внутрішні відступи та рамки */
+}
+
+/* Глобальні змінні проєкту (Палітра TechShop) */
+:root {
+  --primary-color: #2563eb; /* Ваш фірмовий синій */
+  --primary-hover: #1d4ed8; /* Колір при наведенні */
+  --accent-color: #f59e0b;  /* Акцентний помаранчевий */
+  --text-dark: #1f2937;     /* Основний текст */
+  --text-light: #6b7280;    /* Другорядний текст */
+  --bg-color: #f9fafb;      /* Фон сторінки */
+  --font-main: "Inter", sans-serif;
+}
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6; /* Покращує читабельність тексту */
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+.footer a {
+  color: var(--text-light); /* Посилання лише у футері будуть сірими */
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
   color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase; /* Текст великими літерами */
+  letter-spacing: 1px;       /* Розрідження літер */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2); /* Ніжна синя тінь */
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px); /* Кнопка ніби піднімається */
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+.hero {
+  height: 60vh; /* 60% висоти екрану */
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 50px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
